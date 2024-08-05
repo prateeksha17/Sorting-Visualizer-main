@@ -1,0 +1,48 @@
+body {
+    background-color: white !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0 20px 30px 0;
+    line-height: 1;
+}
+.flex-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    transition: 2s all ease;
+    background-color: #f0f0f0; /* Light background for better contrast */
+    padding: 20px; /* Add padding to create some space around the strips */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.flex-item {
+    background: #bd5532;
+    border: 1px solid black;
+    width: 20px; /* Increased width of strips */
+    margin: 0 2.5px; /* Reduced gap between items */
+    transition: 0.1s all ease;
+    border-radius: 5px; /* Rounded corners for the strips */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 10px; /* Reduced spacing between grid columns */
+    margin-top: 20px; /* Add some spacing from the top */
+}
+
+#input {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
