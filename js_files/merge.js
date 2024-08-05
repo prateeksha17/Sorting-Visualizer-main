@@ -31,16 +31,16 @@ async function merge(ele, low, mid, high){
         console.log('In merge while loop');
         console.log(parseInt(left[i]), parseInt(right[j]));
         
-        // To add color for which two r being compared for merging
+        // To add color for which two r being compa#1c448e for merging
         
         if(parseInt(left[i]) <= parseInt(right[j])){
             console.log('In merge while loop if');
             // color
             if((n1 + n2) === ele.length){
-                ele[k].style.background = 'green';
+                ele[k].style.background = '#222e50';
             }
             else{
-                ele[k].style.background = 'lightgreen';
+                ele[k].style.background = 'light#222e50';
             }
             
             ele[k].style.height = left[i];
@@ -51,10 +51,10 @@ async function merge(ele, low, mid, high){
             console.log('In merge while loop else');
             // color
             if((n1 + n2) === ele.length){
-                ele[k].style.background = 'green';
+                ele[k].style.background = '#222e50';
             }
             else{
-                ele[k].style.background = 'lightgreen';
+                ele[k].style.background = 'light#222e50';
             } 
             ele[k].style.height = right[j];
             j++;
@@ -66,10 +66,10 @@ async function merge(ele, low, mid, high){
         console.log("In while if n1 is left");
         // color
         if((n1 + n2) === ele.length){
-            ele[k].style.background = 'green';
+            ele[k].style.background = '#222e50';
         }
         else{
-            ele[k].style.background = 'lightgreen';
+            ele[k].style.background = 'light#222e50';
         }
         ele[k].style.height = left[i];
         i++;
@@ -80,10 +80,10 @@ async function merge(ele, low, mid, high){
         console.log("In while if n2 is left");
         // color
         if((n1 + n2) === ele.length){
-            ele[k].style.background = 'green';
+            ele[k].style.background = '#222e50';
         }
         else{
-            ele[k].style.background = 'lightgreen';
+            ele[k].style.background = 'light#222e50';
         }
         ele[k].style.height = right[j];
         j++;

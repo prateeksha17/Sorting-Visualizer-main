@@ -13,6 +13,10 @@ function disableSortingBtn(){
     document.querySelector(".bubbleSort").disabled = true;
     document.querySelector(".insertionSort").disabled = true;
     document.querySelector(".mergeSort").disabled = true;
+    document.querySelector(".countingSort").disabled = true;
+    document.querySelector(".radixSort").disabled = true;
+    document.querySelector(".bucketSort").disabled = true;
+    document.querySelector(".heapSort").disabled = true;
     document.querySelector(".quickSort").disabled = true;
     document.querySelector(".selectionSort").disabled = true;
 }
@@ -22,6 +26,10 @@ function enableSortingBtn(){
     document.querySelector(".bubbleSort").disabled = false;
     document.querySelector(".insertionSort").disabled = false;
     document.querySelector(".mergeSort").disabled = false;
+    document.querySelector(".countingSort").disabled = false;
+    document.querySelector(".radixSort").disabled = false;
+    document.querySelector(".bucketSort").disabled = false;
+    document.querySelector(".heapSort").disabled = false;
     document.querySelector(".quickSort").disabled = false;
     document.querySelector(".selectionSort").disabled = false;
 }
@@ -81,7 +89,7 @@ let array = [];
 createNewArray();
 
 // To create new array input size of array
-function createNewArray(noOfBars = 40) {
+function createNewArray(noOfBars = 20) {
     // calling helper function to delete old bars from dom
     deleteChild();
 

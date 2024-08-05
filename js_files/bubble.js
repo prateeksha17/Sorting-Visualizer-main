@@ -12,12 +12,12 @@ async function bubble() {
                 await waitforme(delay);
                 swap(ele[j], ele[j+1]);
             }
-            ele[j].style.background = 'cyan';
-            ele[j+1].style.background = 'cyan';
+            ele[j].style.background = '#938ba1';
+            ele[j+1].style.background = '#938ba1';
         }
-        ele[ele.length-1-i].style.background = 'green';
+        ele[ele.length-1-i].style.background = '#222e50';
     }
-    ele[0].style.background = 'green';
+    ele[0].style.background = '#222e50';
 }
 
 const bubSortbtn = document.querySelector(".bubbleSort");

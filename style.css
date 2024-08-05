@@ -1,5 +1,5 @@
 body {
-    background-color: white !important;
+   
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding: 0 20px 30px 0;
@@ -21,10 +21,10 @@ body {
 }
 
 .flex-item {
-    background: #bd5532;
+    background: #0077b6;
     border: 1px solid black;
     width: 20px; /* Increased width of strips */
-    margin: 0 2.5px; /* Reduced gap between items */
+    margin: 0 2.5px; /* #1c448euced gap between items */
     transition: 0.1s all ease;
     border-radius: 5px; /* Rounded corners for the strips */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
@@ -33,7 +33,7 @@ body {
 .row {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    gap: 10px; /* Reduced spacing between grid columns */
+    gap: 10px; /* #1c448euced spacing between grid columns */
     margin-top: 20px; /* Add some spacing from the top */
 }
 
@@ -45,4 +45,54 @@ body {
     border: 1px solid #ddd; /* Light border */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.box-3{
+    background-color: #0077b6;
+  }
+  .btn-three {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+  }
+  .btn-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+
+input[type="range" i] {
+    appearance: auto;
+    cursor: default;
+    background-color: #0077b6;
+    padding: initial;
+    border: initial;
+    margin: 2px;
 }
