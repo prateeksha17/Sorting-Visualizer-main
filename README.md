@@ -5,10 +5,10 @@
 The Sorting Visualizer is a web application designed to help users understand and visualize various sorting algorithms. The application provides animations for each algorithm, highlighting the steps and movements involved in sorting a list of elements. Additionally, it displays the time and space complexities of each algorithm, making it a valuable educational tool for students and developers.
 
 ## Features
-**Responsive Design:** The website is fully responsive and adjusts to different screen sizes, including desktops, tablets, and mobile devices.
-**Visual Animations:** Animates the sorting process step-by-step for a clear understanding of how each algorithm works.
-**Complexity Information:** Displays time and space complexities for each sorting algorithm.
-**Multiple Algorithms:** Includes a variety of sorting algorithms for comparison.
+- **Responsive Design:** The website is fully responsive and adjusts to different screen sizes, including desktops, tablets, and mobile devices.
+- **Visual Animations:** Animates the sorting process step-by-step for a clear understanding of how each algorithm works.
+- **Complexity Information:** Displays time and space complexities for each sorting algorithm.
+- **Multiple Algorithms:** Includes a variety of sorting algorithms for comparison.
 
 ## Supported Sorting Algorithms
 1. **Bubble Sort**
@@ -53,6 +53,10 @@ The Sorting Visualizer is a web application designed to help users understand an
      - Worst: O(n log n)
    - **Space Complexity:** O(1)
 
-**Website Link** : 
+**Website Link** :
 
-**Screenshots**
+
+**Screenshots** 
+ ![image](https://github.com/user-attachments/assets/4c7cf3f0-6ea5-4eb4-9e8c-98a6941be471)
+
+
