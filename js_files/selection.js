@@ -1,7 +1,9 @@
 async function selection(){
+    stopSorting = false;
     console.log('In selection()');
     const ele = document.querySelectorAll(".bar");
     for(let i = 0; i < ele.length; i++){
+        if (stopSorting) return;
         console.log('In ith loop');
         let min_index = i;
         // Change color of the position to swap with the next min

@@ -1,7 +1,9 @@
 async function bubble() {
+    stopSorting = false;
     console.log('In bubbe()');
     const ele = document.querySelectorAll(".bar");
     for(let i = 0; i < ele.length-1; i++){
+        if (stopSorting) return;
         console.log('In ith loop');
         for(let j = 0; j < ele.length-i-1; j++){
             console.log('In jth loop');

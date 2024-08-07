@@ -1,11 +1,13 @@
 
 async function partitionLomuto(ele, l, r){
+    stopSorting = false;
     console.log('In partitionLomuto()');
     let i = l - 1;
     // color pivot element
     ele[r].style.background = '#1c448e';
     for(let j = l; j <= r - 1; j++){
         console.log('In partitionLomuto for j');
+        if (stopSorting) return;
         // color current element
         ele[j].style.background = 'yellow';
         // pauseChamp

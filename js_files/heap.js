@@ -26,11 +26,13 @@ async function heapify(ele, n, i) {
 }
 
 async function heapSort() {
+    stopSorting = false;
     const ele = document.querySelectorAll(".bar");
     let n = ele.length;
 
     // Build a max heap
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+        if (stopSorting) return;
         await heapify(ele, n, i);
     }
 

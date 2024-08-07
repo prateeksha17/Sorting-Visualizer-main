@@ -1,11 +1,13 @@
+// Global variable to control the stop action
+let stopSorting = false;
+
 // swap function util for sorting algorithms takes input of 2 DOM elements with .style.height feature
 function swap(el1, el2) {
+    if (stopSorting) return;
     console.log('In swap()');
-    
     let temp = el1.style.height;
     el1.style.height = el2.style.height;
     el2.style.height = temp;
-    
 }
 
 // Disables sorting buttons used in conjunction with enable, so that we can disable during sorting and enable buttons after it
@@ -13,7 +15,6 @@ function disableSortingBtn(){
     document.querySelector(".bubbleSort").disabled = true;
     document.querySelector(".insertionSort").disabled = true;
     document.querySelector(".mergeSort").disabled = true;
-
     document.querySelector(".heapSort").disabled = true;
     document.querySelector(".quickSort").disabled = true;
     document.querySelector(".selectionSort").disabled = true;
@@ -24,7 +25,6 @@ function enableSortingBtn(){
     document.querySelector(".bubbleSort").disabled = false;
     document.querySelector(".insertionSort").disabled = false;
     document.querySelector(".mergeSort").disabled = false;
-   
     document.querySelector(".heapSort").disabled = false;
     document.querySelector(".quickSort").disabled = false;
     document.querySelector(".selectionSort").disabled = false;
@@ -50,7 +50,7 @@ function enableNewArrayBtn(){
     document.querySelector(".newArray").disabled = false;
 }
 
-// Used in async function so that we can so animations of sorting, takes input time in ms (1000 = 1s)
+// Used in async function so that we can show animations of sorting, takes input time in ms (1000 = 1s)
 function waitforme(milisec) { 
     return new Promise(resolve => { 
         setTimeout(() => { resolve('') }, milisec); 
@@ -116,12 +116,25 @@ function deleteChild() {
     bar.innerHTML = '';
 }
 
-// Selecting newarray button from DOM and adding eventlistener
+// Selecting newArray button from DOM and adding eventlistener
 const newArray = document.querySelector(".newArray");
 newArray.addEventListener("click", function(){
+    stopSorting = false;
     console.log("From newArray " + arraySize.value);
     console.log("From newArray " + delay);
     enableSortingBtn();
     enableSizeSlider();
     createNewArray(arraySize.value);
+});
+
+// Selecting stopSort button from DOM and adding eventlistener
+const stopSort = document.querySelector(".stopSort");
+
+stopSort.addEventListener("click", function() {
+
+    console.log("Stop sorting");
+    stopSorting = true;
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArrayBtn();
 });

@@ -1,9 +1,11 @@
 async function insertion(){
+    stopSorting = false;
     console.log('In insertion()');
     const ele = document.querySelectorAll(".bar");
     // color
     ele[0].style.background = '#222e50';
     for(let i = 1; i < ele.length; i++){
+        if (stopSorting) return;
         console.log('In ith loop');
         let j = i - 1;
         let key = ele[i].style.height;

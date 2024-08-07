@@ -1,5 +1,6 @@
 //let delay = 30;
 async function merge(ele, low, mid, high){
+    stopSorting = false;
     console.log('In merge()');
     console.log(`low=${low}, mid=${mid}, high=${high}`);
     const n1 = mid - low + 1;
@@ -9,6 +10,7 @@ async function merge(ele, low, mid, high){
     let right = new Array(n2);
 
     for(let i = 0; i < n1; i++){
+        if (stopSorting) return;
         await waitforme(delay);
         console.log('In merge left loop');
         console.log(ele[low + i].style.height + ' at ' + (low+i));
